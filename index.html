@@ -1,0 +1,159 @@
+<!--Reto 2: Carrito de la compra-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Hoja estilo CSS -->
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+
+    <title>Carrito de la compra - Reto2 -</title>
+</head>
+
+<body class="d-flex flex-column bg-ligth min-vh-100">
+
+    <header class="container-fluid bg-success py-3">
+        <h2 class="text-center text-white">Tienda Online</h2>
+    </header>
+
+    <main class="container justify-content-center flex-grow-1">
+
+        <article class="row">
+
+            <section class="col col-12 text-center my-3">
+                <h6>En nuestra sección de hoy podrá disfrutar de los mejores productos. Añada el que desee a su carrito de compra
+                </h6>
+            </section>
+
+            <!--TIENDA, elementos drag-->
+            <section class="col col-12">
+                <h4 class="text-left text-warning">Tienda</h4>
+                <ul class="row border border-warning list-unstyled justify-content-center p-2" id="tienda">
+                    <li class="col-auto d-flex flex-column border border-success rounded text-center p-1" id="Batido" draggable="true" ondragstart="dragstart(event)" ondragend="dragend(event)">
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                            <img draggable="false" src="productos/batido.png">
+                            <!--draggable="false" en img evitamos que se arrastre la img, por defecto en html-->
+                        </div>
+                        <h6>Batido</h6>
+                        <p>1€</p>
+                    </li>
+                    <li class="col-auto d-flex flex-column border border-success rounded text-center p-1" id="Donut" draggable="true" ondragstart="dragstart(event)">
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                            <img draggable="false" src="productos/donut.png">
+                        </div>
+                        <h6>Donut</h6>
+                        <p>2€</p>
+                    </li>
+                    <li class="col-auto d-flex flex-column border border-success rounded text-center p-1" id="Fresa" draggable="true" ondragstart="dragstart(event)">
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                            <img draggable="false" src="productos/fresa.png">
+                        </div>
+                        <h6>Fresa</h6>
+                        <p>3€</p>
+                    </li>
+                    <li class="col-auto d-flex flex-column border border-success rounded text-center p-1" id="Helado" draggable="true" ondragstart="dragstart(event)">
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                            <img draggable="false" src="productos/helado.png">
+                        </div>
+                        <h6>Helado</h6>
+                        <p>4€</p>
+                    </li>
+                    <li class="col-auto d-flex flex-column border border-success rounded text-center p-1" id="Leche" draggable="true" ondragstart="dragstart(event)">
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                            <img draggable="false" src="productos/leche.png">
+                        </div>
+                        <h6>Leche</h6>
+                        <p>5€</p>
+                    </li>
+                    <li class="col-auto d-flex flex-column border border-success rounded text-center p-1" id="Manzana" draggable="true" ondragstart="dragstart(event)">
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                            <img draggable="false" src="productos/manzana.png">
+                        </div>
+                        <h6>Manzana</h6>
+                        <p>6€</p>
+                    </li>
+                    <li class="col-auto d-flex flex-column border border-success rounded text-center p-1" id="Naranja" draggable="true" ondragstart="dragstart(event)">
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                            <img draggable="false" src="productos/naranja.png">
+                        </div>
+                        <h6>Naranja</h6>
+                        <p>7€</p>
+                    </li>
+                    <li class="col-auto d-flex flex-column border border-success rounded text-center p-1" id="Pan" draggable="true" ondragstart="dragstart(event)">
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                            <img draggable="false" src="productos/pan.png">
+                        </div>
+                        <h6>Pan</h6>
+                        <p>8€</p>
+                    </li>
+                    <li class="col-auto d-flex flex-column border border-success rounded text-center p-1" id="Pizza" draggable="true" ondragstart="dragstart(event)">
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                            <img draggable="false" src="productos/pizza.png">
+                        </div>
+                        <h6>Pizza</h6>
+                        <p>9€</p>
+                    </li>
+                    <li class="col-auto d-flex flex-column border border-success rounded text-center p-1" id="Platano" draggable="true" ondragstart="dragstart(event)">
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                            <img draggable="false" src="productos/platano.png">
+                        </div>
+                        <h6>Plátano</h6>
+                        <p>10€</p>
+                    </li>
+                    <li class="col-auto d-flex flex-column border border-success rounded text-center p-1" id="Snack" draggable="true" ondragstart="dragstart(event)">
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                            <img draggable="false" src="productos/snack.png">
+                        </div>
+                        <h6>Snack</h6>
+                        <p>11€</p>
+                    </li>
+                    <li class="col-auto d-flex flex-column border border-success rounded text-center p-1" id="Vino" draggable="true" ondragstart="dragstart(event)">
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                            <img draggable="false" src="productos/vino.png">
+                        </div>
+                        <h6>Vino</h6>
+                        <p>12€</p>
+                    </li>
+                    <li class="col-auto d-flex flex-column border border-success rounded text-center p-1" id="Zumo" draggable="true" ondragstart="dragstart(event)">
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                            <img draggable="false" src="productos/zumo.png">
+                        </div>
+                        <h6>Zumo</h6>
+                        <p>13€</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!--CARRITO contenedor drop-->
+            <section class="col col-12">
+                <h4 class="text-left text-success">Carrito</h4>
+                <ul class="row border border-success list-unstyled flex-grow-1 justify-content-center p-3" id="carrito" ondrop="drop(event)" ondragover="dragover(event)"></ul>
+            </section>
+
+            <!-- LISTA DE PRODUCTOS y TOTAL-->
+            <section class="col col-12">
+                <div class="row my-3">
+                    <ul class="col col-12 list-group list-unstyled text-right border border-secondary" id="lista"></ul>
+                    <h5 class="col text-right align-self-center" id="total">TOTAL: 0 €</h5>
+                    <button class="col-auto btn btn-danger m-1" onClick="borrar();">BORRAR TODO</button>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="row row-cols-1 mt-auto">
+        <p class="col text-center text-white bg-dark">
+            - Bootcamp Frontend de <a href="https://geekshubsacademy.com/" title="Academia de formación para desarrolladores con bloques formativos online y presenciales">GeeksHubs
+                Academy</a>. Reto 2 : Dynamic Showcase, by Alicia -
+        </p>
+    </footer>
+
+    <script src="js/carritojs.js"></script>
+</body>
+
+</html>

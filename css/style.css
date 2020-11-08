@@ -1,0 +1,20 @@
+#tienda {
+    background-color: lightyellow;
+}
+
+#tienda li:hover {
+    cursor: pointer;
+}
+
+#carrito {
+    min-height: 20vh;
+    background-image: url('../productos/carrito.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: lightcyan;
+}
+
+.list-group {
+    max-height: 20vh;
+    overflow-y: auto;
+}
